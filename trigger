@@ -15,15 +15,15 @@ insert into dept values(20,'Marketing',150,2100);
 select * from dept;
 
 
-set serveroutput on;
 create or replace trigger trig1
 after insert
 on dept
 for each row
 begin
-update emply set salary=450000 where deptid=20;
+update emply set salary=400000 where deptid=20;
 end;
 
 select * from dept;
+select * from emply;
 
 insert into dept values(30,'Advisor',180,2400);
