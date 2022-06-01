@@ -1,0 +1,14 @@
+select * from employee2;
+
+create view empview as select empno,eaddress,hiredate from employee2;
+select * from empview;
+
+create view empview1 as select empno,salary from employee2 where salary>16000;
+select * from empview1;
+
+insert into empview (empno,eaddress,hiredate) values ('106','erd','11-may-19');
+
+update empview set eaddress='sar' where empno='106';
+
+delete from empview where empno='105';
+
